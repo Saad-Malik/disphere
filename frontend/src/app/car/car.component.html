@@ -1,0 +1,15 @@
+<div *ngFor="let car of cars" class="main">
+    <mat-card class="card">
+        <mat-card-header>
+          <mat-card-title>{{car.brand}} | {{car.power}}HP</mat-card-title>
+          <mat-card-subtitle>{{car.modal}} | {{car.color}} | {{car.size}}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <p>
+            {{car.description}} 
+          </p>
+        <h2 *ngIf="car.hasTrailerHitch === true" style="color: red;">Yes it has a trailer hitch</h2>  
+          
+        </mat-card-content>
+    </mat-card>
+</div>
