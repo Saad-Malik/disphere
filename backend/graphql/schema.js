@@ -9,6 +9,7 @@ const schema = gql`
 
         getUsers:[User]
         getAUser(id:ID):User
+        
         searchCar(color:String):[Car]
     }
 

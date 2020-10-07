@@ -1,6 +1,10 @@
-<input type="text" [(ngModel)]="searchText" (ngModelChange)="executeSearch()">
-
+<div class="main">
+  <mat-form-field >
+    <input type="text" matInput placeholder="Search" [(ngModel)]="searchText" (ngModelChange)="executeSearch()">
+  </mat-form-field>
+</div>
 <div *ngFor="let car of cars" class="main">
+  
     <mat-card class="card">
         <mat-card-header>
           <mat-card-title>{{car.brand}} | {{car.power}}HP</mat-card-title>
