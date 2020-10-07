@@ -22,13 +22,17 @@ export class CarComponent implements OnInit {
 
   constructor(private apollo:Apollo) { }
 
-  ngOnInit(): void {
+  initial(){
     this.querySubscribtion = this.apollo.watchQuery<any>(
       {query:CarsQuery}
     ).valueChanges.subscribe(({data,loading})=>{
       this.cars = data.getCars;
       this.loading = data.loading;
     });
+  }
+
+  ngOnInit(): void {
+   this.initial();
   }
 
 
