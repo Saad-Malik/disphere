@@ -1,3 +1,5 @@
+<input type="text" [(ngModel)]="searchText" (ngModelChange)="executeSearch()">
+
 <div *ngFor="let car of cars" class="main">
     <mat-card class="card">
         <mat-card-header>

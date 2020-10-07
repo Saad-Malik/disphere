@@ -5,15 +5,13 @@ const schema = require('./graphql/schema');
 const resolvers = require('./graphql/resolver');
 const config = require('./config');
 const bodyParser = require('body-parser');
-const Car = require("./model/Car");
-
 
 //Initializing Express
 const app = express();
 
+
 //Middleware for cors and body parser
 app.use(bodyParser.json());
-
 
 
 //Initialize Apollo Server
@@ -21,6 +19,7 @@ const server = new ApolloServer({
     typeDefs:schema,
     resolvers
 }); 
+
 
 //Middleware to connect Express and Apollo Server
 server.applyMiddleware({app,path:"/graphql"});

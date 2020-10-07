@@ -8,6 +8,7 @@ const carSchema = new mongoose.Schema({
     modal:Number,
     description:String,
     hasTrailerHitch:{type:Boolean, default:false},
+    userID:String
 });
 
 const Car = mongoose.model('car',carSchema);
